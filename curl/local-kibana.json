@@ -1,0 +1,69 @@
+{
+  "is_partial": false,
+  "is_running": false,
+  "rawResponse": {
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+      "total": 1,
+      "successful": 1,
+      "skipped": 0,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": null,
+      "hits": [
+        {
+          "_index": "logstash-spring-demo",
+          "_type": "_doc",
+          "_id": "Dalsnn4B30jbTnXGRa8x",
+          "_version": 1,
+          "_score": null,
+          "_source": {
+            "image_id": "sha256:c607749d2f101697fb94d6da4fe51de130983c80958f780615e6274ec3a89cdb",
+            "host": "server.localdomain",
+            "source_host": "192.168.0.119",
+            "@version": "1",
+            "LogStr": "1 --- [nio-8080-exec-2] c.e.d.controller.LoggerDemoController    : hahahah",
+            "container_name": "spring-demo",
+            "LogTime": "2022-01-28 10:03:22.681",
+            "@timestamp": "2022-01-28T02:03:22.683Z",
+            "level": 6,
+            "container_id": "d325ed57a2b06722fef20c5d66844db07ae00944126cf6db31dadcd8dbad93c1",
+            "command": "java -Xms1G -Xmx1G -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar spring-demo.jar",
+            "LogLevel": "ERROR",
+            "created": "2022-01-21T03:50:43.622145319Z",
+            "tag": "d325ed57a2b0",
+            "image_name": "spring-demo",
+            "version": "1.1"
+          },
+          "fields": {
+            "@timestamp": [
+              "2022-01-28T02:03:22.683Z"
+            ],
+            "created": [
+              "2022-01-21T03:50:43.622Z"
+            ]
+          },
+          "sort": [
+            1643335402683
+          ]
+        }
+      ]
+    },
+    "aggregations": {
+      "2": {
+        "buckets": [
+          {
+            "key_as_string": "2022-01-28T10:03:00.000+08:00",
+            "key": 1643335380000,
+            "doc_count": 1
+          }
+        ]
+      }
+    }
+  },
+  "total": 1,
+  "loaded": 1
+}

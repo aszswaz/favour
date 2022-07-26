@@ -1,0 +1,16 @@
+# IDEA
+.idea
+cmake-build-debug
+*.iml
+
+# build
+builder
+
+# ccls
+compile_commands.json
+
+# other
+cache
+
+# C++ 函数所在位置索引
+tags

@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+command -v cmake >>/dev/null 2>&1 || { echo "cmake not found." 1>&2 && exit 1 }
+command -v g++ >>/dev/null 2>&1 || { echo "g++ not found." 1>&2 && exit 1 }
+command -v ctags >>/dev/null 2>&1 || { echo "ctags not found." 1>&2 && exit 1 }
+
+project_dir=$(dirname $0)
+# 确保脚本的工作目录正确
+cd "${project_dir}"
+# 生成缓存
+cmake -S "${project_dir}" -B "${project_dir}/builder" || exit 1
+# 生成函数的位置索引
+ctags $(find -path "./src/**" -type f)

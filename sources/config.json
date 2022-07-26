@@ -1,0 +1,17 @@
+{
+  "servers": [
+    {
+      "name": "local",
+      "home": "http://192.168.24.1:5601/app/kibana",
+      "api": "http://192.168.24.1:5601/internal/search/es",
+      "indices": [
+        {
+          "project": "logstash-spring-demo",
+          "index": "logstash-spring-demo",
+          "url": "http://192.168.24.1:5601/app/kibana#/discover?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),filters:!(),index:'00a2e730-7a6e-11ec-92b5-ebccf35b52d1',interval:auto,query:(language:kuery,query:''),sort:!())"
+        }
+      ]
+    }
+  ],
+  "timer": 5
+}
